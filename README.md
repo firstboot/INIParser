@@ -7,7 +7,6 @@ The ini file(a configured file) parser of library by C++.  The Windows/Linux/Mac
 [default]   
 server_ip = 127.0.0.1   
 server_port = 8800  
-    
 [other]   
 client_num = 10 
 
