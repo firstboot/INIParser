@@ -17,8 +17,15 @@ int main()
     ini_parser.Clear();
     cout << ini_parser.GetSize() << endl;
 
-    ini_parser.SetValue("class1","name1","Tom");
-    ini_parser.SetValue("class2","name2","Lucy");
-    ini_parser.WriteINI("test.ini");
+    INIParser ini_wrt;
+    ini_wrt.SetValue("course1","name","math");
+    ini_wrt.SetValue("course1","prof","Hans");
+    ini_wrt.SetValue("course1","credit","5.0");
+    ini_wrt.SetValue("course2","name","writing");
+    ini_wrt.SetValue("course2","prof","Lisa");
+    ini_wrt.SetValue("course2","credit","3.0");
+    ini_wrt.WriteINI("test.ini");
+    ini_wrt.Clear();
+
     return 0;
 }
