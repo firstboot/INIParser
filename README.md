@@ -3,15 +3,15 @@ INIParser
 
 The ini file(a configured file) parser of library by C++.  The Windows/Linux/Mac supporting!    
 
-1. Assumption a ini file named conf.ini, as follows:    
+1.Assumption a ini file named conf.ini, as follows:    
 [default]   
 server_ip = 127.0.0.1   
 server_port = 8800  
     
-[other] 
+[other]   
 client_num = 10 
 
-2. Using INIParser read and parse conf.ini, for example:    
+2.Using INIParser read and parse conf.ini, for example:    
     INIParser ini_parser;
     ini_parser.ReadINI("conf.ini"); // read and parse conf.ini 
     // return a string, the outcome is 8800 
@@ -21,7 +21,7 @@ client_num = 10
     ini_parser.Clear();
     cout << ini_parser.GetSize() << endl;
     
-3. Using INIParser write a ini file, for example:   
+3.Using INIParser write a ini file, for example:   
     INIParser ini_wrt;
     ini_wrt.SetValue("course1","name","math");
     ini_wrt.SetValue("course1","prof","Hans");
