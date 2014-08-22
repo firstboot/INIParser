@@ -11,25 +11,25 @@ server_port = 8800
 client_num = 10 
 
 2.Using INIParser read and parse conf.ini, for example:    
-    INIParser ini_parser;
-    ini_parser.ReadINI("conf.ini"); // read and parse conf.ini 
-    // return a string, the outcome is 8800 
-    cout << ini_parser.GetValue("default", "server_port") << endl; 
-    cout << ini_parser.GetValue("other", "client_num") << endl;
-    // clear
-    ini_parser.Clear();
-    cout << ini_parser.GetSize() << endl;
+INIParser ini_parser;   
+ini_parser.ReadINI("conf.ini"); // read and parse conf.ini  
+// return a string, the outcome is 8800 
+cout << ini_parser.GetValue("default", "server_port") << endl;  
+cout << ini_parser.GetValue("other", "client_num") << endl; 
+// clear    
+ini_parser.Clear(); 
+cout << ini_parser.GetSize() << endl;   
     
 3.Using INIParser write a ini file, for example:   
-    INIParser ini_wrt;
-    ini_wrt.SetValue("course1","name","math");
-    ini_wrt.SetValue("course1","prof","Hans");
-    ini_wrt.SetValue("course1","credit","5.0");
-    ini_wrt.SetValue("course2","name","writing");
-    ini_wrt.SetValue("course2","prof","Lisa");
-    ini_wrt.SetValue("course2","credit","3.0");
-    ini_wrt.WriteINI("test.ini");
-   
+INIParser ini_wrt;  
+ini_wrt.SetValue("course1","name","math");  
+ini_wrt.SetValue("course1","prof","Hans");  
+ini_wrt.SetValue("course1","credit","5.0"); 
+ini_wrt.SetValue("course2","name","writing");   
+ini_wrt.SetValue("course2","prof","Lisa");  
+ini_wrt.SetValue("course2","credit","3.0");   
+ini_wrt.WriteINI("test.ini");   
+    
 /* test.ini */  
 [course1]   
 credit=5.0  
