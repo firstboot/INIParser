@@ -1,11 +1,18 @@
 #include "INIParser.h"
 
-//remove all blank space
+//remove before and after blank space
 string& INIParser::TrimString(string &str)
 {
     string::size_type pos = 0;
-    while(str.npos != (pos = str.find(" ")))
+    while(str[pos] == ' ' && str.npos != (pos = str.find(" ")))
         str = str.replace(pos, pos+1, "");
+
+    pos = str.size()-1;
+    while(str[pos] == ' ')
+    {
+        str = str.replace(pos, pos+1, "");
+        pos--;
+    }
     return str;
 }
 
